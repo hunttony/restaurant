@@ -1,0 +1,61 @@
+<!-- header.ejs -->
+
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.9.3/hamburgers.css" rel="stylesheet">
+  
+  <header>
+    <div class="header-container">
+     
+      <div>
+        <img src="images/Restaurant_logo.png" alt="Your logo" id="header-img" style="width: 120px">
+      </div>
+      
+      <div>        
+        <button class="hamburger hamburger--spin" type="button" aria-label="Menu" aria-controls="popUpNav" aria-expanded="false" onclick="toggleNav()">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="popUpNav" class="overlay">
+    
+     <!-- Back button -->
+    <div id="overlay-content" class="overlay-content">
+      
+    
+      <%- include('nav.ejs') %>
+      <%- include('containment') %>
+    </div>
+         
+  </div>  
+    
+  
+  
+  <script>
+    // JavaScript to prevent default behavior and load pages dynamically
+    document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener to overlay links
+
+    
+  
+
+    var overlayLinks = document.querySelectorAll('#popUpNav .overlay-content a');
+    overlayLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+
+            // Load content of the linked page into the overlay
+            var href = link.getAttribute('href');
+            loadPageIntoOverlay(href);
+        });
+    });
+});
+
+
+
+  </script>
+
+

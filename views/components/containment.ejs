@@ -1,0 +1,34 @@
+<div class="container" id="overlay-content-frame">  
+          
+  <!-- Loaded component content will appear here -->
+</div>
+
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  var container = document.getElementById('container');
+  var overlay = document.getElementById('popUpNav');
+
+  // Function to show container
+  function showContainer() {
+      container.classList.add('container');
+  }
+
+  // Function to hide container
+  function hideContainer() {
+      container.classList.remove('container');
+  }
+
+  // Add event listener to detect overlay state changes
+  overlay.addEventListener('transitionend', function() {
+      if (overlay.classList.contains('active')) {
+          showContainer();
+      } else {
+          hideContainer();
+      }
+  });
+});
+
+</script>
