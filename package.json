@@ -16,5 +16,9 @@
     "express": "^4.19.2"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "Restaurant Site",
+
+  "engines": {
+    "node": "20.12.0"
+  }
 }
