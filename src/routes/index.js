@@ -4,7 +4,7 @@ const router = express.Router();
 
 /*const menuMod = require('./menuMod'); */
 
-require('dotenv').config();
+
 
 router.get('/', function(req, res) {
   res.render('index', { title: 'Your Restaurant'});
