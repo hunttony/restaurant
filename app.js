@@ -9,7 +9,7 @@ const server = http.createServer(app);
 
 app.use(express.static(  'public'));
 
-app.set('views', './src/views');
+app.set('views', './');
 app.set('view engine', 'ejs');
 
 app.use('/', indexRoutes);
@@ -22,6 +22,6 @@ http
 
 
 // Start the server
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0',() => {
     console.log(`Server is running on port ${PORT}`);
 });
