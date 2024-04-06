@@ -1,0 +1,16 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - yarn install
+    build:
+      commands:
+        - yarn build  # Assuming this command builds your frontend assets
+  artifacts:
+    baseDirectory: public  # Change to the directory where your built assets are located
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
