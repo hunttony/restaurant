@@ -1,0 +1,164 @@
+<style>
+  /* Add your CSS styles here */
+  .announcement-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 30vh;
+  
+}
+
+.announcement {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border-radius: 45px;
+  box-shadow: 0 2px 10px rgba(255, 255, 255,0.5);
+  text-align: center;
+  border:0;
+  width: 75%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;   
+  opacity: 0;
+ 
+}
+.announcements h1 h2{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* Add your animation keyframes here */
+
+
+  .slideIn {
+    animation-name: slideIn;
+    animation-duration: 3s;
+  }
+
+  .slideOut {
+    animation-name: slideOut;
+    animation-duration: 3s;
+  }
+
+
+  .fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s; /* Change the duration as needed */
+  }
+
+  .fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 2s; /* Change the duration as needed */
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-300%);
+      
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+      
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(300%);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+</style>
+
+
+  <div class="announcements" id="announcements" >
+    <h2>Announcements</h2>
+    <div class="announcement-container">
+      
+     <!-- Announcement containers go here --></div>
+  </div>
+  
+
+<script>
+
+  
+  // JavaScript to handle announcements
+  document.addEventListener('DOMContentLoaded', function() {
+    const containers = document.querySelectorAll('.announcement-container');
+    let currentContainerIndex = 0;
+
+    // Function to add announcements with varying animations
+    function addAnnouncement(message, containerIndex, animation) {
+      console.log('made it here 3')
+      const container = containers[containerIndex];
+      const announcement = document.createElement('div');
+      announcement.classList.add('announcement', animation);
+      announcement.textContent = message;
+      container.appendChild(announcement);
+      
+
+      // Remove the announcement after 5 seconds
+      setTimeout(function() {
+       
+    announcement.classList.remove('slideIn');
+    announcement.classList.add('slideOut');
+    setTimeout(function() {
+      announcement.remove();
+     
+        }, 1000); // Wait for the slideOut animation to complete
+      }, 5000); // Show the announcement for
+    }
+
+    
+
+    // Example announcements and configurations
+    
+
+    
+
+    function displayAnnouncements() {
+      console.log('currentContainerIndex: ', currentContainerIndex);
+      const announcement = announcements[currentContainerIndex];
+      addAnnouncement(announcement.message, announcement.containerIndex, announcement.animation);
+      
+      currentContainerIndex = (currentContainerIndex + 1) % containers.length; // Move to the next container
+    }
+
+    // Display announcements indefinitely
+    setInterval(displayAnnouncements, 6000); // Change the interval as needed
+  });
+
+  const announcements = [
+      { message: 'Welcome to our website! Enjoy!', animation: 'slideIn', containerIndex: 0 },
+      { message: 'New menu items added!', animation: 'slideIn', containerIndex: 1 },
+      { message: 'Special offer: Buy one get one free!', animation: 'slideIn', containerIndex: 2 }
+      // Add more announcements and configurations as needed
+    ];
+
+</script>

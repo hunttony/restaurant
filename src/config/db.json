@@ -1,0 +1,617 @@
+{
+  "menuCategories": [
+    {
+      "id": 1,
+      "name": "Drinks",
+      "subMenus": [
+        {
+          "id": 1,
+          "name": "Coffee",
+          "items": [
+            {
+              "id": 1,
+              "name": "Cappuccino",
+              "description": "Espresso with steamed milk and foam.",
+              "price": 3.99,
+              "image": "images/cappuccino.jpg",
+              "tags": "Coffee"
+            },
+            {
+              "id": 2,
+              "name": "Latte",
+              "description": "Espresso with steamed milk.",
+              "price": 3.99,
+              "image": "images/latte.jpg",
+              "tags": "Coffee"
+            },
+            {
+              "id": 3,
+              "name": "Americano",
+              "description": "Espresso with hot water.",
+              "price": 3.49,
+              "image": "images/americano.jpg",
+              "tags": "Coffee"
+            },
+            {
+              "id": 4,
+              "name": "Flat White",
+              "description": "Espresso with steamed milk and whipped cream.",
+              "price": 3.99,
+              "image": "images/flat-white.jpg",
+              "tags": "Coffee"
+            },
+            {
+              "id": 5,
+              "name": "Espresso",
+              "description": "Strong and intense coffee.",
+              "price": 2.99,
+              "image": "images/espresso.jpg",
+              "tags": "Coffee"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "Sodas",
+          "items": [
+            {
+              "id": 7,
+              "name": "Coca-Cola",
+              "description": "Coca-Cola.",
+              "price": 2.99,
+              "image": "images/coca-cola.jpg",
+              "tags": "Sodas"
+            },
+            {
+              "id": 8,
+              "name": "Sprite",
+              "description": "Sprite.",
+              "price": 2.99,
+              "image": "images/sprite.jpg",
+              "tags": "Sodas"
+            },
+            {
+              "id": 9,
+              "name": "Fanta",
+              "description": "Fanta.",
+              "price": 2.99,
+              "image": "images/fanta.jpg",
+              "tags": "Sodas"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Tea",
+          "items": [
+            {
+              "id": 5,
+              "name": "Black Tea",
+              "description": "Pure black tea.",
+              "price": 2.99,
+              "image": "images/black-tea.jpg",
+              "tags": "Tea"
+            },
+            {
+              "id": 6,
+              "name": "Green Tea",
+              "description": "Pure green tea.",
+              "price": 2.99,
+              "image": "images/green-tea.jpg",
+              "tags": "Tea"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Smoothies",
+          "items": [
+            {
+              "id": 7,
+              "name": "Vanilla Smoothie",
+              "description": "Vanilla ice cream with milk and vanilla syrup.",
+              "price": 3.99,
+              "image": "images/vanilla-smoothie.jpg",
+              "tags": "Smoothies"
+            },
+            {
+              "id": 8,
+              "name": "Chocolate Smoothie",
+              "description": "Chocolate ice cream with milk and chocolate syrup.",
+              "price": 3.99,
+              "image": "images/chocolate-smoothie.jpg",
+              "tags": "Smoothies"
+            },
+            {
+              "id": 9,
+              "name": "Strawberry Smoothie",
+              "description": "Strawberry ice cream with milk and strawberry syrup.",
+              "price": 3.99,
+              "image": "images/strawberry-smoothie.jpg",
+              "tags": "Smoothies"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Milkshakes",
+          "items": [
+            {
+              "id": 7,
+              "name": "Vanilla Milkshake",
+              "description": "Vanilla ice cream with whipped cream and vanilla syrup.",
+              "price": 3.99,
+              "image": "images/vanilla-milkshake.jpg",
+              "tags": "Milkshakes"
+            },
+            {
+              "id": 8,
+              "name": "Chocolate Milkshake",
+              "description": "Chocolate ice cream with whipped cream and chocolate syrup.",
+              "price": 3.99,
+              "image": "images/chocolate-milkshake.jpg",
+              "tags": "Milkshakes"
+            },
+            {
+              "id": 9,
+              "name": "Strawberry Milkshake",
+              "description": "Strawberry ice cream with whipped cream and strawberry syrup.",
+              "price": 3.99,
+              "image": "images/strawberry-milkshake.jpg",
+              "tags": "Milkshakes"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Wines",
+          "items": [
+            {
+              "id": 7,
+              "name": "Red Wine",
+              "description": "Sweet and red wine.",
+              "price": 8.99,
+              "image": "images/red-wine.jpg",
+              "tags": "Wines"
+            },
+            {
+              "id": 8,
+              "name": "White Wine",
+              "description": "Light and white wine.",
+              "price": 8.99,
+              "image": "images/white-wine.jpg",
+              "tags": "Wines"
+            },
+            {
+              "id": 9,
+              "name": "Sparkling Wine",
+              "description": "Refreshing and sparkling wine.",
+              "price": 8.99,
+              "image": "images/sparkling-wine.jpg",
+              "tags": "Wines"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Beers",
+          "items": [
+            {
+              "id": 7,
+              "name": "IPA",
+              "description": "India Pale Ale.",
+              "price": 8.99,
+              "image": "images/ipa.jpg",
+              "tags": "Beers"
+            },
+            {
+              "id": 8,
+              "name": "APA",
+              "description": "American Pale Ale.",
+              "price": 8.99,
+              "image": "images/apa.jpg",
+              "tags": "Beers"
+            },
+            {
+              "id": 9,
+              "name": "APA",
+              "description": "American Pale Ale.",
+              "price": 8.99,
+              "image": "images/apa.jpg",
+              "tags": "Beers"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Juices",
+          "items": [
+            {
+              "id": 7,
+              "name": "Orange Juice",
+              "description": "Freshly squeezed orange juice.",
+              "price": 3.99,
+              "image": "images/orange-juice.jpg",
+              "tags": "Juices"
+            },
+            {
+              "id": 8,
+              "name": "Apple Juice",
+              "description": "Freshly squeezed apple juice.",
+              "price": 3.99,
+              "image": "images/apple-juice.jpg",
+              "tags": "Juices"
+            },
+            {
+              "id": 9,
+              "name": "Grape Juice",
+              "description": "Freshly squeezed grape juice.",
+              "price": 3.99,
+              "image": "images/grape-juice.jpg",
+              "tags": "Juices"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Appetizers",
+      "subMenus": [
+        {
+          "id": 1,
+          "name": "Starters",
+          "items": [
+            {
+              "id": 1,
+              "name": "Garlic Parmesan Fries",
+              "description": "Crispy fries tossed in garlic butter and sprinkled with Parmesan cheese.",
+              "price": 4.99,
+              "image": "images/garlic-parmesan-fries.jpg",
+              "tags": "Starters"
+            },
+            {
+              "id": 2,
+              "name": "Loaded Nachos",
+              "description": "Crisp tortilla chips topped with melted cheese, salsa, guacamole, sour cream, and jalapenos.",
+              "price": 8.49,
+              "image": "images/loaded-nachos.jpg",
+              "tags": "Starters"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Salads",
+          "items": [
+            {
+              "id": 3,
+              "name": "Caesar Salad",
+              "description": "Romaine lettuce, croutons, Parmesan cheese, and Caesar dressing.",
+              "price": 8.99,
+              "image": "images/caesar-salad.jpg",
+              "tags": "Salads"
+            },
+            {
+              "id": 4,
+              "name": "Greek Salad",
+              "description": "Crisp lettuce, tomatoes, olives, feta cheese, and Greek dressing.",
+              "price": 8.99,
+              "image": "images/greek-salad.jpg",
+              "tags": "Salads"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Soups",
+          "items": [
+            {
+              "id": 3,
+              "name": "Tomato Basil Soup",
+              "description": "Classic tomato soup made with ripe tomatoes, fresh basil, and a touch of cream.",
+              "price": 5.99,
+              "image": "images/tomato-basil-soup.jpg",
+              "tags": "Soups"
+            },
+            {
+              "id": 4,
+              "name": "Chicken Noodle Soup",
+              "description": "Hearty soup made with tender chicken, vegetables, and egg noodles in a savory broth.",
+              "price": 6.49,
+              "image": "images/chicken-noodle-soup.jpg",
+              "tags": "Soups"
+            },
+            {
+              "id": 1,
+              "name": "Chicken Noodle Soup",
+              "description": "Hearty soup made with tender chicken, vegetables, and egg noodles in a savory broth.",
+              "price": 6.49,
+              "image": "images/chicken-noodle-soup.jpg",
+              "tags": "Soups"
+            },
+            {
+              "id": 2,
+              "name": "Tomato Basil Soup",
+              "description": "Classic tomato soup made with ripe tomatoes, fresh basil, and a touch of cream.",
+              "price": 5.99,
+              "image": "images/tomato-basil-soup.jpg",
+              "tags": "Soups"
+            },
+            {
+              "id": 3,
+              "name": "Broccoli Cheddar Soup",
+              "description": "Creamy soup loaded with broccoli florets and melted cheddar cheese.",
+              "price": 7.49,
+              "image": "images/broccoli-cheddar-soup.jpg",
+              "tags": "Soups"
+            },
+            {
+              "id": 4,
+              "name": "Minestrone Soup",
+              "description": "Hearty Italian soup with a mix of vegetables, beans, and pasta in a flavorful tomato broth.",
+              "price": 6.99,
+              "image": "images/minestrone-soup.jpg",
+              "tags": "Soups"
+            },
+            {
+              "id": 5,
+              "name": "Lentil Soup",
+              "description": "Nutritious soup made with lentils, carrots, celery, and onions, seasoned with herbs and spices.",
+              "price": 5.99,
+              "image": "images/lentil-soup.jpg",
+              "tags": "Soups"
+            },
+            {
+              "id": 6,
+              "name": "Butternut Squash Soup",
+              "description": "Smooth and velvety soup made with roasted butternut squash, onions, and a hint of nutmeg.",
+              "price": 6.99,
+              "image": "images/butternut-squash-soup.jpg",
+              "tags": "Soups"
+            },
+            {
+              "id": 7,
+              "name": "French Onion Soup",
+              "description": "Rich and flavorful soup made with caramelized onions, beef broth, and topped with melted cheese and croutons.",
+              "price": 7.99,
+              "image": "images/french-onion-soup.jpg",
+              "tags": "Soups"
+            },
+            {
+              "id": 8,
+              "name": "Clam Chowder",
+              "description": "Creamy soup loaded with tender clams, potatoes, and vegetables, seasoned with herbs and spices.",
+              "price": 8.49,
+              "image": "images/clam-chowder.jpg",
+              "tags": "Soups"
+            },
+            {
+              "id": 9,
+              "name": "Miso Soup",
+              "description": "Traditional Japanese soup made with dashi broth, tofu, seaweed, and green onions, flavored with miso paste.",
+              "price": 5.49,
+              "image": "images/miso-soup.jpg",
+              "tags": "Soups"
+            },
+            {
+              "id": 10,
+              "name": "Vegetable Soup",
+              "description": "Healthy and hearty soup made with a variety of fresh vegetables, simmered in a flavorful broth.",
+              "price": 6.49,
+              "image": "images/vegetable-soup.jpg",
+              "tags": "Soups"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "Sides",
+          "items": [
+            {
+              "id": 7,
+              "name": "Fries",
+              "description": "Crispy fries.",
+              "price": 2.99,
+              "image": "images/fries.jpg",
+              "tags": "Sides"
+            },
+            {
+              "id": 8,
+              "name": "Onion Rings",
+              "description": "Crispy onion rings.",
+              "price": 2.99,
+              "image": "images/onion-rings.jpg",
+              "tags": "Sides"
+            },
+            {
+              "id": 9,
+              "name": "Sweet Potato Fries",
+              "description": "Crispy sweet potato fries.",
+              "price": 2.99,
+              "image": "images/sweet-potato-fries.jpg",
+              "tags": "Sides"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Main Courses",
+      "subMenus": [
+        {
+          "id": 3,
+          "name": "Entrees",
+          "items": [
+            {
+              "id": 1,
+              "name": "Spaghetti Bolognese",
+              "description": "Classic Italian pasta dish with ground beef, onions, and garlic.",
+              "price": 12.99,
+              "image": "images/spaghetti-bolognese.jpg",
+              "tags": "Entrees"
+            },
+            {
+              "id": 2,
+              "name": "Lasagna",
+              "description": "Rich and flavorful lasagna with layers of pasta, sauce, and cheese.",
+              "price": 14.99,
+              "image": "images/lasagna.jpg",
+              "tags": "Entrees"
+            },
+            {
+              "id": 3,
+              "name": "Penne Arrabbiata",
+              "description": "Classic Italian pasta dish with tomato sauce, garlic, and fresh basil.",
+              "price": 11.99,
+              "image": "images/penne-arrabbiata.jpg",
+              "tags": "Entrees"
+            },
+            {
+              "id": 4,
+              "name": "Ravioli Alfredo",
+              "description": "Classic Italian pasta dish with cream cheese, spinach, and Parmesan cheese.",
+              "price": 13.99,
+              "image": "images/ravioli-alfredo.jpg",
+              "tags": "Entrees"
+            },
+            {
+              "id": 5,
+              "name": "Carbonara",
+              "description": "Classic Italian pasta dish with ground beef, bacon, and eggs.",
+              "price": 12.99,
+              "image": "images/carbonara.jpg",
+              "tags": "Entrees"
+            },
+            {
+              "id": 6,
+              "name": "Cacio e Pepe",
+              "description": "Classic Italian pasta dish with ground beef, onion, and spices.",
+              "price": 12.99,
+              "image": "images/cacio-e-pepe.jpg",
+              "tags": "Entrees"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Pizzas",
+          "items": [
+            {
+              "id": 7,
+              "name": "Margherita Pizza",
+              "description": "Classic pizza topped with tomato sauce, fresh mozzarella cheese, and basil leaves.",
+              "price": 10.99,
+              "image": "images/margherita-pizza.jpg",
+              "tags": "Pizzas"
+            },
+            {
+              "id": 8,
+              "name": "Meat Lovers Pizza",
+              "description": "Satisfy your carnivorous cravings with this pizza loaded with pepperoni, sausage, ham, and bacon.",
+              "price": 12.99,
+              "image": "images/meat-lovers-pizza.jpg",
+              "tags": "Pizzas"
+            },
+            {
+              "id": 9,
+              "name": "Vegetarian Pizza",
+              "description": "A delightful pizza topped with fresh vegetables like bell peppers, onions, olives, and mushrooms.",
+              "price": 11.99,
+              "image": "images/vegetarian-pizza.jpg",
+              "tags": "Pizzas"
+            },
+            {
+              "id": 10,
+              "name": "Hawaiian Pizza",
+              "description": "Taste the tropics with this pizza featuring juicy pineapple chunks, ham, and mozzarella cheese.",
+              "price": 12.49,
+              "image": "images/hawaiian-pizza.jpg",
+              "tags": "Pizzas"
+            },
+            {
+              "id": 11,
+              "name": "Supreme Pizza",
+              "description": "The ultimate pizza experience with a combination of pepperoni, sausage, bell peppers, onions, olives, and mushrooms.",
+              "price": 13.99,
+              "image": "images/supreme-pizza.jpg",
+              "tags": "Pizzas"
+            },
+            {
+              "id": 12,
+              "name": "Buffalo Chicken Pizza",
+              "description": "Spicy buffalo sauce, tender chicken pieces, and melted cheese on a crispy crust.",
+              "price": 12.99,
+              "image": "images/buffalo-chicken-pizza.jpg",
+              "tags": "Pizzas"
+            },
+            {
+              "id": 13,
+              "name": "BBQ Chicken Pizza",
+              "description": "Tangy barbecue sauce, grilled chicken, red onions, and cilantro create a flavorful pizza experience.",
+              "price": 13.49,
+              "image": "images/bbq-chicken-pizza.jpg",
+              "tags": "Pizzas"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Burgers",
+          "items": [
+            {
+              "id": 14,
+              "name": "Classic Burger",
+              "description": "A timeless favorite with lettuce, tomato, onion, and pickles.",
+              "price": 9.99,
+              "image": "images/classic-burger.jpg",
+              "tags": "Burgers"
+            },
+            {
+              "id": 15,
+              "name": "Cheeseburger",
+              "description": "The classic burger topped with melted American cheese.",
+              "price": 10.99,
+              "image": "images/cheeseburger.jpg",
+              "tags": "Burgers"
+            },
+            {
+              "id": 16,
+              "name": "Bacon Burger",
+              "description": "A savory burger topped with crispy bacon strips.",
+              "price": 11.99,
+              "image": "images/bacon-burger.jpg",
+              "tags": "Burgers"
+            },
+            {
+              "id": 17,
+              "name": "Mushroom Swiss Burger",
+              "description": "Juicy burger topped with sauted mushrooms and melted Swiss cheese.",
+              "price": 12.49,
+              "image": "images/mushroom-swiss-burger.jpg",
+              "tags": "Burgers"
+            },
+            {
+              "id": 18,
+              "name": "BBQ Bacon Burger",
+              "description": "Tangy barbecue sauce and crispy bacon take this burger to the next level.",
+              "price": 13.49,
+              "image": "images/bbq-bacon-burger.jpg",
+              "tags": "Burgers"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subscribe": [],
+  "contact": [],
+  "investors": [],
+  "orders": [],
+  "comments": [],
+  "menus": [],
+  "employment": [],
+  "users": [],
+  "posts": []
+}

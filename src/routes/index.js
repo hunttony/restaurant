@@ -1,13 +1,26 @@
 const express = require('express');
 const router = express.Router();
+const dbHandler = require('../lib/dbHandler');
+
 
 
 /*const menuMod = require('./menuMod'); */
 
 
 
-router.get('/', function(req, res) {
-  res.render('index', { title: 'Your Restaurant'});
+router.get('/', async function(req, res) {
+  
+  try {
+    // Fetch menu items from the database
+    const menuCategories = await dbHandler.getAllMenuItems();
+    console.log('made it here too');
+    // Render the 'scroller.ejs' view and pass menuItems data to it
+    res.render('index', { title: 'Your Restaurant', menuCategories: menuCategories });
+  } catch (error) {
+    // Handle errors gracefully
+    console.error('Error fetching menu items:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 router.get('/about', function(req, res) {

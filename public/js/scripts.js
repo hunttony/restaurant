@@ -118,6 +118,3 @@ $(document).ready(function() {
               console.error('Error fetching page content:', error);
           });
   }
-
-  
-  

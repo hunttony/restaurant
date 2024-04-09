@@ -1,27 +1,35 @@
 <!-- index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thynk Cafe | Best Restaurant in Houston</title>
+        <meta name="description" content="Welcome to [Your Restaurant Name], where we serve delicious [Cuisine Type] dishes in [Location]. Enjoy a diverse menu of appetizers, main courses, desserts, and more. Book your table now!">
+        <meta name="keywords" content="restaurant, best restaurant, [Cuisine Type], dining, [Location], menu, reservations, food, cuisine, fine dining, casual dining">
+        
+        <!-- Bootstrap CSS -->
+        <!-- Include Bootstrap CSS here if used -->
+        <link rel="icon" type="image/png" href="images/Restaurant_logo.png">
+        <!-- Custom CSS -->
+        <link href="/styles/styles.css" rel="stylesheet">
+    </head>
     
-    <!-- Bootstrap CSS -->
-   
-    <!-- Custom CSS -->
-    <link href="/styles/styles.css" rel="stylesheet">
-</head>
 <body>
     
-    <%- include('components/bgVideo.ejs') %>
-      <div><%- include('components/header.ejs') %></div>
+        <div><%- include('components/bgVideo.ejs') %></div>
+        <div><%- include('components/header.ejs') %></div>
      
       
-      <div><%- include('components/hero.ejs') %></div>
+        <div><%- include('components/hero.ejs') %>        
+        </div>
 
-      
+        <div>
+            <%- include('components/announcement.ejs') %>
+        </div>
 
 
-      <div><%- include('components/footer.ejs') %></div>  
+        <div><%- include('components/footer.ejs') %></div>  
     
     
     

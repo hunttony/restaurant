@@ -1,3 +1,11 @@
 node_modules/*
 .idea/*
 !images/.gitkeep
+json-mate.py
+addtags.py
+/src/routes/emails.js
+/src/routes/index - Copy.js
+/src/config/db2.json
+/src/config/updated_db2.json
+/src/config/updated_db3.json
+

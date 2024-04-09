@@ -1,39 +1,106 @@
-
- 
-  <div class="menu-scroll">
-    <div class="menu-items">
-      <div class="menu-item">
-        <img src="images/hamburger.jpg" alt="Food 1">
-        <h3>Hamburgers</h3>
-        <p>Description of menu item 1.</p>
+<div class="menu-scroll">
+  <!-- Search input -->
+  
+  
+  <div class="menu-items" id="menuItems">
+    <!-- Menu items will be dynamically generated here -->
+    <% menuCategories.forEach(function(category) { %>
+      <div class="menu-category">
+        <h2><%= category.name %></h2>
+        <% category.subMenus.forEach(function(subMenu) { %>
+          <h3><%= subMenu.name %></h3>
+          <% subMenu.items.forEach(function(item) { %>
+            <div class="menu-item" data-name="<%= item.name.toLowerCase() %>">
+              <div class="popup-trigger" data-name="<%= item.name %>" data-description="<%= item.description %>" data-price="<%= item.price.toFixed(2) %>" data-image="<%= item.image %>">
+                <h4><%= item.name %></h4>
+              </div>
+            </div>
+          <% }); %>
+        <% }); %>
       </div>
-      <div class="menu-item">
-        <img src="images/deli-sandwich.jpg" alt="Food 2">
-        <h3>Deli Sandwiches</h3>
-        <p>Description of menu item 2.</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/side-dishes.jpg" alt="Food 3">
-        <h3>Side Dishes</h3>
-        <p>Description of menu item 3.</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/drinks.jpg" alt="Food 4">
-        <h3>Drinks</h3>
-        <p>Description of menu item 4.</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/hamburger.jpg" alt="Food 5">
-        <h3>Drinks</h3>
-        <p>Description of menu item 5.</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/deli-sandwich.jpg" alt="Food 2">
-        <h3>Deli Sandwiches</h3>
-        <p>Description of menu item 2.</p>
-      </div>
-      <!-- Add more menu items as needed -->
-    </div>
+    <% }); %>
   </div>
   
+  <!-- Popup container -->
+  <div id="popup-container" class="popup-container">
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <img id="popup-image" src="" alt="">
+      <h4 id="popup-name"></h4>
+      <p id="popup-description"></p>
+      <p id="popup-price"></p>
+    </div>
+  </div>
+</div>
 
+<script>
+  // JavaScript to handle popup functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const popupContainer = document.getElementById('popup-container');
+    const popupClose = document.querySelector('.popup-close');
+
+    // Function to open the popup
+    function openPopup(name, description, price, image) {
+      const popupImage = document.getElementById('popup-image');
+      const popupName = document.getElementById('popup-name');
+      const popupDescription = document.getElementById('popup-description');
+      const popupPrice = document.getElementById('popup-price');
+
+      popupImage.src = image;
+      popupName.textContent = name;
+      popupDescription.textContent = description;
+      popupPrice.textContent = '$' + price;
+
+      popupContainer.style.display = 'block';
+    }
+
+    // Function to close the popup
+    function closePopup() {
+      popupContainer.style.display = 'none';
+    }
+
+    // Event listener to open popup when trigger button is clicked
+    const popupTriggers = document.querySelectorAll('.popup-trigger');
+    popupTriggers.forEach(function(trigger) {
+      trigger.addEventListener('click', function() {
+        const name = this.getAttribute('data-name');
+        const description = this.getAttribute('data-description');
+        const price = this.getAttribute('data-price');
+        const image = this.getAttribute('data-image');
+        const tags = this.getAttribute('data-tags');
+        openPopup(name, description, price, image, tags);
+      });
+    });
+
+    // Event listener to close popup when close button is clicked
+    popupClose.addEventListener('click', closePopup);
+
+    // Close popup when user clicks outside of it
+    window.addEventListener('click', function(event) {
+      if (event.target === popupContainer) {
+        closePopup();
+      }
+    });
+
+    
+    // Real-time search functionality
+// Real-time search functionality
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('input', function() {
+  const searchTerm = this.value.toLowerCase();
+  const menuItems = document.querySelectorAll('.menu-item');
+  menuItems.forEach(function(item) {
+    const itemName = item.getAttribute('data-name');
+    const itemTagsString = item.getAttribute('data-tags');
+    const itemTags = itemTagsString ? itemTagsString.split(',').map(tag => tag.trim().toLowerCase()) : []; // Split tags and convert to lowercase array
+    if (itemName.toLowerCase().includes(searchTerm) || itemTags.includes(searchTerm)) { // Check if itemName or tags include searchTerm
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+});
+
+
+  });
+</script>
